@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1039308726205",
+    "firebase_url": "https://foodhub-13d9c-default-rtdb.firebaseio.com",
+    "project_id": "foodhub-13d9c",
+    "storage_bucket": "foodhub-13d9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039308726205:android:fc1f0037ea1c0ac5347cd4",
+        "android_client_info": {
+          "package_name": "com.example.foodhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039308726205-jpjhvf05srco76lmnoiusovbt8s87ukl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC2wTsBZ4evX0RF6LYP-H28G8SxPJTJJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039308726205-jpjhvf05srco76lmnoiusovbt8s87ukl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

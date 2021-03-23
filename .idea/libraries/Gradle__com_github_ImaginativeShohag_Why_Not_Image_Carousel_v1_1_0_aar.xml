@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ImaginativeShohag:Why-Not-Image-Carousel:v1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5397c31c22d8fa169032b77a0a65fe88/jetified-Why-Not-Image-Carousel-v1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5397c31c22d8fa169032b77a0a65fe88/jetified-Why-Not-Image-Carousel-v1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5397c31c22d8fa169032b77a0a65fe88/jetified-Why-Not-Image-Carousel-v1.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ImaginativeShohag/Why-Not-Image-Carousel/v1.1.0/c78b21dc60cf9afd109fef7802288853a684acd5/Why-Not-Image-Carousel-v1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

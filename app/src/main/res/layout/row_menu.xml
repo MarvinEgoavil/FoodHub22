@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/container_image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_name_restaurant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@tools:sample/avatars" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_name_restaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_image"
+        tools:text="Nombre producto" />
+
+    <ImageView
+        android:id="@+id/img_start"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@color/verde"
+        android:src="@drawable/ic_action_start"
+        app:layout_constraintStart_toStartOf="@+id/txt_name_restaurant"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_restaurant"
+        app:tint="@color/verde" />
+
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/verde"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_start"
+        app:layout_constraintStart_toEndOf="@+id/img_start"
+        app:layout_constraintTop_toTopOf="@+id/img_start"
+        tools:text="3.5" />
+
+    <TextView
+        android:id="@+id/txt_rating_tag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/verde"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_rating"
+        app:layout_constraintStart_toEndOf="@+id/txt_rating"
+        app:layout_constraintTop_toTopOf="@+id/txt_rating"
+        tools:text="Bien" />
+
+    <TextView
+        android:id="@+id/txt_product_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_rating_tag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_rating_tag"
+        app:layout_constraintTop_toTopOf="@+id/txt_rating_tag"
+        tools:text="Descripcion producto" />
+
+
+    <TextView
+        android:id="@+id/txt_delivery_free"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Envio gratis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/img_start"
+        app:layout_constraintTop_toBottomOf="@+id/img_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
