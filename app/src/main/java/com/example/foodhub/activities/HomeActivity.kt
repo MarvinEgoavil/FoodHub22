@@ -55,10 +55,12 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         homeFragment = HomeFragment()
         politicaFragment = PoliticaFragment()
         userFragment = UserFragment()
+
         loginFragment = LoginFragment()
+        mFragmentTag=homeFragment.TAG
 
 
-        addOrReplaceFragment(homeFragment, false, false, false, homeFragment.TAG)
+        addOrReplaceFragment(homeFragment, false, false, false, mFragmentTag)
 
         //Creando el toogle del Drawer
         val toolbar = binding.incluyedLayout.toolbar
@@ -87,7 +89,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                addOrReplaceFragment(homeFragment, true, false, true, homeFragment.TAG)
+                mFragmentTag=homeFragment.TAG
+                addOrReplaceFragment(homeFragment, true, false, true, mFragmentTag)
             } /*
             R.id.nav_perfil -> {
                 addOrReplaceFragment(userFragment, true, true, true, userFragment.TAG)
@@ -96,13 +99,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 addOrReplaceFragment(configFragment, true, true, true, configFragment.TAG)
             } */
             R.id.nav_nosotros -> {
-                addOrReplaceFragment(acercaFragment, true, false, true, acercaFragment.TAG)
+                mFragmentTag=acercaFragment.TAG
+                addOrReplaceFragment(acercaFragment, true, false, true, mFragmentTag)
             }
             R.id.nav_salir -> {
-                val n = Intent(this, MainActivity::class.java)
-                startActivity(n)
-                Animatoo.animateDiagonal(this)
-                finishAffinity()
+                  exit()
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)

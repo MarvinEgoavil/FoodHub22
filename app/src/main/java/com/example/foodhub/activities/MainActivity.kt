@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
        // getWindow().setBackgroundDrawable(background)
     }
 
+
     fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment)
