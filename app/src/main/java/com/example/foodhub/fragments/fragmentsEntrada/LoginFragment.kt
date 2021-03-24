@@ -15,6 +15,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.foodhub.R
 import com.example.foodhub.activities.HomeActivity
 import com.example.foodhub.activities.MainActivity
+import com.example.foodhub.api.Api
 import com.example.foodhub.api.RetrofitClient
 import com.example.foodhub.databinding.FragmentLoginBinding
 import com.example.foodhub.fragments.fragmentsEntrada.fragmentsRecovery.SendEmailFragment
@@ -117,7 +118,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun loginUser() {
-        RetrofitClient.instanceFood.loginUser(email, pass)
+        RetrofitClient.instanceFood().create(Api::class.java).loginUser(email, pass)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(
                     call: Call<LoginResponse>,
