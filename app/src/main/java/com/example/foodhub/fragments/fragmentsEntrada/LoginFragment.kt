@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
     private lateinit var tvRegistrarse: TextView
-    private lateinit var tvOlvidaste: TextView
+ //    private lateinit var tvOlvidaste: TextView
     private lateinit var mainActivity: MainActivity
 
     private lateinit var registerFragment: RegisterFragment
@@ -65,7 +65,7 @@ class LoginFragment : Fragment() {
         hideSoftKeyboard()
 
         tvRegistrarse = binding.TvRegistrar
-        tvOlvidaste = binding.TvOlvidaste
+     //    tvOlvidaste = binding.TvOlvidaste
         btnLogin = binding.btnLogin
 
         mainActivity = activity as MainActivity
@@ -82,14 +82,14 @@ class LoginFragment : Fragment() {
             transaction.commit()
         }
 
-        tvOlvidaste.setOnClickListener {
+   /*     tvOlvidaste.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
             transaction.setCustomAnimations(R.anim.left_in, R.anim.left_out)
             transaction.replace(R.id.fragment_container, sendEmailFragment)
             transaction.disallowAddToBackStack()
             transaction.commit()
         }
-
+*/
         binding.btnLogin.setOnClickListener {
             initProgressLoad(true, "Iniciando sesion")
 

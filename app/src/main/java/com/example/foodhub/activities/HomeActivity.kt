@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.WindowManager
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -36,6 +37,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var userFragment: UserFragment
     lateinit var loginFragment: LoginFragment
     lateinit var drawer: AdvanceDrawerLayout
+    lateinit var mFragmentTag:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +56,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         politicaFragment = PoliticaFragment()
         userFragment = UserFragment()
         loginFragment = LoginFragment()
+
 
         addOrReplaceFragment(homeFragment, false, false, false, homeFragment.TAG)
 
@@ -84,16 +87,16 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                addOrReplaceFragment(homeFragment, false, false, false, homeFragment.TAG)
-            }
+                addOrReplaceFragment(homeFragment, true, false, true, homeFragment.TAG)
+            } /*
             R.id.nav_perfil -> {
-                addOrReplaceFragment(userFragment, false, false, false, userFragment.TAG)
+                addOrReplaceFragment(userFragment, true, true, true, userFragment.TAG)
             }
             R.id.nav_configuracion -> {
-                addOrReplaceFragment(configFragment, false, false, false, configFragment.TAG)
-            }
+                addOrReplaceFragment(configFragment, true, true, true, configFragment.TAG)
+            } */
             R.id.nav_nosotros -> {
-                addOrReplaceFragment(acercaFragment, false, false, false, acercaFragment.TAG)
+                addOrReplaceFragment(acercaFragment, true, false, true, acercaFragment.TAG)
             }
             R.id.nav_salir -> {
                 val n = Intent(this, MainActivity::class.java)
@@ -157,18 +160,30 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
+        Log.d(TAG, "onBackPressed 1 mFragmentTag: "+ mFragmentTag)
         val drawer = binding.drawerLayout
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val webViewFragment: WebViewFragment =
-            fragmentManager.findFragmentByTag(WebViewFragment.TAG) as WebViewFragment
-
         if (drawer.isDrawerOpen(GravityCompat.START)) {
+            Log.d(TAG,"onBackPressed 2 mFragmentTag: "+mFragmentTag)
             binding.drawerLayout.closeDrawer(GravityCompat.START)
-        } else if (webViewFragment != null && !webViewFragment.isResumed() && webViewFragment.onBackPressed()) {
             return
-        } else {
-            super.onBackPressed()
         }
+
+        if(mFragmentTag.equals(homeFragment.TAG)) {
+            Log.d(TAG,"onBackPressed 3 mFragment: "+mFragmentTag)
+            createAlertDialog()
+            return
+        }
+        if(supportFragmentManager.backStackEntryCount==0) {
+            mFragmentTag=homeFragment.TAG
+            Log.d(TAG,"onBackPressed 4 mFragmentTag: "+ mFragmentTag)
+            addOrReplaceFragment(homeFragment, true,false,true,mFragmentTag)
+            return
+        }
+        if(recursivePopBackStack(supportFragmentManager)) {
+            Log.d(TAG,"onBackPressed 5 mFragment: "+mFragmentTag)
+            return
+        }
+            super.onBackPressed()
     }
 
     fun config() {
@@ -200,4 +215,30 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         return false
     }
+
+    private fun createAlertDialog() {
+        var builder: AlertDialog.Builder = this.let { AlertDialog.Builder(this) }
+        builder.setTitle("Action")
+        builder.setMessage("Esta a punto de salir de la aplicación. \nDesea salir de la aplicación?")
+        builder.apply {
+            setPositiveButton("Salir") { dialog, id ->
+                exit()
+            }
+            setNegativeButton("No") { dialog, id ->
+                dialog.dismiss()
+            }
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    fun exit() {
+        val n = Intent(this, MainActivity::class.java)
+        startActivity(n)
+        Animatoo.animateDiagonal(this)
+        finishAffinity()
+
+
+    }
+
 }
