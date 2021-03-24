@@ -15,8 +15,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="BranchesTreeState">
     <expand>
@@ -28,7 +28,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="043771e4-498a-412f-bf6f-442bdac96af3" name="Default Changelist" comment="Ultima correcion, ya muestra el dialogo si se vca para atras">
+    <list default="true" id="043771e4-498a-412f-bf6f-442bdac96af3" name="Default Changelist" comment="ultimos cambios en register">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,7 +40,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/api/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/api/Api.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/api/RetrofitClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/fragments/fragmentsEntrada/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/fragments/fragmentsEntrada/LoginFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/fragments/fragmentsEntrada/RegisterFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodhub/fragments/fragmentsEntrada/RegisterFragment.kt" afterDir="false" />
@@ -103,7 +102,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ApkExportedModule" value="FoodHub.app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_26" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-23T15:11:40.083Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-24T12:59:36.296Z" />
     <property name="ExportApk.ApkPath" value="C:\proyectosandroid\FoodHub\app" />
     <property name="ExportApk.BuildVariants" value="debug" />
     <property name="ExportApk.SignV2" value="true" />
@@ -336,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616555516348</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ultimos cambios en register">
+      <created>1616588488624</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616588488624</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +369,8 @@
     <MESSAGE value="cambiando la apariencia de la app" />
     <MESSAGE value="cambios alert diagloc audno se da para atras" />
     <MESSAGE value="Ultima correcion, ya muestra el dialogo si se vca para atras" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ultima correcion, ya muestra el dialogo si se vca para atras" />
+    <MESSAGE value="ultimos cambios en register" />
+    <option name="LAST_COMMIT_MESSAGE" value="ultimos cambios en register" />
   </component>
   <component name="WindowStateProjectService">
     <state x="253" y="204" width="1135" height="656" key="#Gradle" timestamp="1615334000303">
@@ -451,28 +458,28 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1739" y="398" key="Github.UntrackedFilesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1616515149490" />
-    <state width="2516" height="283" key="GridCell.Tab.0.bottom" timestamp="1616560571580">
+    <state width="2516" height="357" key="GridCell.Tab.0.bottom" timestamp="1616590827515">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="283" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1616560571580" />
+    <state width="2516" height="357" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1616590827515" />
     <state width="1876" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1615438112976" />
     <state width="1877" height="336" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1616298582204" />
-    <state width="2516" height="283" key="GridCell.Tab.0.center" timestamp="1616560571580">
+    <state width="2516" height="357" key="GridCell.Tab.0.center" timestamp="1616590827515">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="283" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1616560571580" />
+    <state width="2516" height="357" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1616590827515" />
     <state width="1876" height="278" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1615438112976" />
     <state width="1877" height="336" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1616298582204" />
-    <state width="2516" height="283" key="GridCell.Tab.0.left" timestamp="1616560571580">
+    <state width="2516" height="357" key="GridCell.Tab.0.left" timestamp="1616590827515">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="283" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1616560571580" />
+    <state width="2516" height="357" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1616590827515" />
     <state width="1876" height="278" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1615438112976" />
     <state width="1877" height="336" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1616298582204" />
-    <state width="2516" height="283" key="GridCell.Tab.0.right" timestamp="1616560571580">
+    <state width="2516" height="357" key="GridCell.Tab.0.right" timestamp="1616590827515">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="283" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1616560571580" />
+    <state width="2516" height="357" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1616590827515" />
     <state width="1876" height="278" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1615438112976" />
     <state width="1877" height="336" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1616298582204" />
     <state width="1876" height="278" key="GridCell.Tab.1.bottom" timestamp="1615438112977">
@@ -500,10 +507,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="732" height="446" key="SwitcherDM/0.0.2560.1400@0.0.2560.1400" timestamp="1612328272395" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1616555522843">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1616588494811">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1616555522843" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1616588494811" />
     <state x="1096" y="478" key="chooseDestDirectoryDialog" timestamp="1614942307367">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -513,10 +520,10 @@
     </state>
     <state x="1426" y="267" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1612409281490" />
     <state x="1070" y="230" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1615407095563" />
-    <state x="992" y="488" key="git4idea.merge.GitPullDialog" timestamp="1611749766765">
+    <state x="992" y="488" key="git4idea.merge.GitPullDialog" timestamp="1616588440952">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="992" y="488" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1611749766765" />
+    <state x="992" y="488" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1616588440952" />
     <state x="1976" y="487" key="refactoring.ChangeSignatureDialog" timestamp="1614156445768">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

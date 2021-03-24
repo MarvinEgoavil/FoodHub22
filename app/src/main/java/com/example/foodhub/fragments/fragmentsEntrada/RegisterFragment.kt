@@ -19,30 +19,25 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.foodhub.R
 import com.example.foodhub.activities.HomeActivity
 import com.example.foodhub.activities.MainActivity
-import com.example.foodhub.api.Api
 import com.example.foodhub.api.RetrofitClient
 import com.example.foodhub.databinding.FragmentRegisterBinding
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 
 class RegisterFragment : Fragment() {
     private var TAG: String = RegisterFragment::class.java.name
 
     private lateinit var binding: FragmentRegisterBinding
-
-    /*private var name: String = ""
+    private var name: String = ""
     private var email: String = ""
     private var password: String = ""
-    private var password_confirmation: String = ""*/
+    private var password_confirmation: String = ""
     private lateinit var progressDialog: ProgressDialog
     private lateinit var mainActivity: MainActivity
     private lateinit var loginFragment: LoginFragment
-
-   // var instanceRetrofit: RetrofitClient = RetrofitClient.instanceFood()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,10 +75,10 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         hideSoftKeyboard()
         binding.btnEnviar.setOnClickListener(View.OnClickListener setOnClickListener@{
-            /*name = binding.inputName.text.toString().trim()
+            name = binding.inputName.text.toString().trim()
             email = binding.editTextEmail.text.toString().trim()
             password = binding.editTextPassword.text.toString().trim()
-            password_confirmation = binding.inputRePassword.text.toString().trim()*/
+            password_confirmation = binding.inputRePassword.text.toString().trim()
             if (isEmpty(
                     binding.inputName,
                     binding.editTextEmail,
@@ -92,12 +87,7 @@ class RegisterFragment : Fragment() {
                 )
             ) {
                 initProgressLoad(true, "Registrando nuevo usuario")
-                register(
-                    binding.inputName.text.toString().trim(),
-                    binding.editTextPassword.text.toString().trim(),
-                    binding.inputRePassword.text.toString().trim(),
-                    binding.editTextEmail.text.toString().trim()
-                )
+                register()
             }
         })
     }
@@ -148,17 +138,8 @@ class RegisterFragment : Fragment() {
         imm.hideSoftInputFromWindow(requireView().getWindowToken(), 0)
     }
 
-    private fun register(
-        name: String,
-        password: String,
-        password_confirmation: String,
-        email: String,
-    ) {
-        Log.d(
-            TAG,
-            "register name: " + name + ", password: " + password + ", password_confirmation: " + password_confirmation + ", email: " + email
-        )
-        RetrofitClient.instanceFood().create(Api::class.java).createUser(name, password, password_confirmation, email)
+    private fun register() {
+        RetrofitClient.instanceFood.createUser(name, password, password_confirmation, email)
             .enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(
                     call: Call<ResponseBody>,
@@ -177,7 +158,7 @@ class RegisterFragment : Fragment() {
                             startActivity(intent)
                             Animatoo.animateSlideLeft(mainActivity)
                             mainActivity?.finishAffinity()
-                        } else if (response.code() == 400) {
+                        } else if(response.code()==400) {
                             Log.i(
                                 TAG,
                                 "response no es nulo y la conexion no fue exitosa " + response.errorBody()

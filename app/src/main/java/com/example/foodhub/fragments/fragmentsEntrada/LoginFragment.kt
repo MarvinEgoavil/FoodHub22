@@ -15,7 +15,6 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.foodhub.R
 import com.example.foodhub.activities.HomeActivity
 import com.example.foodhub.activities.MainActivity
-import com.example.foodhub.api.Api
 import com.example.foodhub.api.RetrofitClient
 import com.example.foodhub.databinding.FragmentLoginBinding
 import com.example.foodhub.fragments.fragmentsEntrada.fragmentsRecovery.SendEmailFragment
@@ -30,7 +29,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
     private lateinit var tvRegistrarse: TextView
- //    private lateinit var tvOlvidaste: TextView
+    private lateinit var tvOlvidaste: TextView
     private lateinit var mainActivity: MainActivity
 
     private lateinit var registerFragment: RegisterFragment
@@ -66,7 +65,7 @@ class LoginFragment : Fragment() {
         hideSoftKeyboard()
 
         tvRegistrarse = binding.TvRegistrar
-     //    tvOlvidaste = binding.TvOlvidaste
+        // tvOlvidaste = binding.TvOlvidaste
         btnLogin = binding.btnLogin
 
         mainActivity = activity as MainActivity
@@ -83,14 +82,14 @@ class LoginFragment : Fragment() {
             transaction.commit()
         }
 
-   /*     tvOlvidaste.setOnClickListener {
+/*        tvOlvidaste.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
             transaction.setCustomAnimations(R.anim.left_in, R.anim.left_out)
             transaction.replace(R.id.fragment_container, sendEmailFragment)
             transaction.disallowAddToBackStack()
             transaction.commit()
-        }
-*/
+        } */
+
         binding.btnLogin.setOnClickListener {
             initProgressLoad(true, "Iniciando sesion")
 
@@ -112,13 +111,12 @@ class LoginFragment : Fragment() {
             }
 
             loginUser()
-
         }
 
     }
 
     private fun loginUser() {
-        RetrofitClient.instanceFood().create(Api::class.java).loginUser(email, pass)
+        RetrofitClient.instanceFood.loginUser(email, pass)
             .enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(
                     call: Call<LoginResponse>,

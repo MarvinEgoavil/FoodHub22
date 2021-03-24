@@ -20,14 +20,7 @@ object RetrofitClient {
             chain.proceed(request)
         }.build()
 
-    fun instanceFood(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://foodhubservice.herokuapp.com/api/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-    /*val instanceFood: Api by lazy {
+    val instanceFood: Api by lazy {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://foodhubservice.herokuapp.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -35,7 +28,7 @@ object RetrofitClient {
             .build()
 
         retrofit.create(Api::class.java)
-    }*/
+    }
     val instanceMenu: Api by lazy {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.androidhive.info/")
